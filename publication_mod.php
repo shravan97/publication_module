@@ -1,7 +1,7 @@
 <?php 
-$h=mysqli_connect("localhost","root","Lordsvn_97","publications") or die("Error .....  ".mysqli_errno($h)); 
+include 'db_connect.php';
 $query="select * from publications_table;";
-$r=mysqli_query($h,$query) or die("Error 1	.....  ".mysqli_errno($h));
+$r=mysqli_query($h,$query) or die("Error 	.....  ".mysqli_errno($h));
 
 if(isset($_GET['delete'])){
 	$sl = mysqli_real_escape_string($h , $_GET['delete']);

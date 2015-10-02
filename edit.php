@@ -1,6 +1,6 @@
 <?php 
 
-$h=mysqli_connect("localhost","root","Lordsvn_97","publications")  or die("Error....".mysqli_errno($h));
+include "db_connect.php";
     
 if (isset($_POST['btn_sub'])) {
 	if (!empty($_POST["new_publication"])) {

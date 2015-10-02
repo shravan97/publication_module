@@ -1,3 +1,7 @@
+<?php 
+include "db_connect.php";
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +53,6 @@
     </td>
   </thead>
 <?php 
-$h = mysqli_connect("localhost","root","Lordsvn_97","publications") or die("Error in connection to database......".mysqli_errno($h)); 
 $query="select * from publications_table;";
 $r=mysqli_query($h,$query) or die("Error 1	.....  ".mysqli_errno($h));
 $counter=0;$arr_num=array();	

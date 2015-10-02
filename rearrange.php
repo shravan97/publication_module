@@ -1,5 +1,6 @@
 <?php
-$h = mysqli_connect("localhost","root","Lordsvn_97","publications") or die("Error in connection to database......".mysqli_errno($h)); 
+include "db_connect.php";
+
 if(isset($_POST['arr_vals'])&& !empty($_POST['arr_vals'])){
 	
 $arr1 = array();
